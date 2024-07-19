@@ -1,40 +1,28 @@
-import './Blog.css'
+import './BlogList.css'
 import { Link } from 'react-router-dom'
 const BlogList=(props)=>{
     
     return(
         <div> 
-        <Link to='/addBlog'>
-            <button type='button' className='button'>+Add New Blog</button>
+        <Link to="/manageblog/add/new">
+            <button type='button' className='add-btn'>+ Add</button>
         </Link>
         <div className="blog-container">
           {props.blogData.map(list=>(
-            <Link to={`/blogSingle/${list.id}`}>
-            <div className="blog-thumbnail col-4">
-                <div className="img-wrapper">
-                    <img src={list.imgurl}/>
-                </div>
-                <div className='blog content'>
-                    <div className='blog-header'>
-                      {list.title}
-                    </div>
-                    <div className='blog-description'>
-                      {list.description}
-                    </div>
-                </div>
+            <Link key={list.id} to={`/blog/${list.id}`} className="blog-link">
+            <div className="blog-content">
+                <img src={list.imgurl} alt="blogImage"/>
+                <h5 className='blog-header'>{list.title}</h5>
+                <p className='blog-description'>{list.description}</p>
                 <div className='blog-author'>
-                    <div className="author-name">
-                        {list.author.name}
-                    </div>
-                    <div className="blog-date">
-                        {list.author.date}
-                    </div>
+                    <p className="author-name">{list.author.name}</p>
+                    <p className="blog-date">{list.author.date}</p>
                 </div>
             </div>
             </Link>
          ))}
         </div>
-        </div>
+    </div>
     )
 }
 export default BlogList

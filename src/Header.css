@@ -1,72 +1,36 @@
 .header {
-    background-image: url('https://www.pixelstalk.net/wp-content/uploads/2016/06/Green-Nature-HD-Wallpapers.jpg');
+    background-image: url('../src/assets/blog-banner-1.jpg');
     min-width: 100px;
     min-height: 500px;
+}
 
-}
-.header-container{
-    font-size: 48px;
-    color:aliceblue;
-}
-.header-container .header-container{
-   margin-top: 200px;
-}
 .nav-bar {
-    background-color: rgb(3, 150, 96);
+    background-color:#003F9A;
     height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #F0F0F0;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.logo-container{
+    display: flex;
+    align-items: center;
 }
 
 .logo-img {
-    width: 70px;
-    float: left;
+    width: 35px;
+    height: 35px;
 }
-.nav-menu{
-    float: right;
-    display:flex;
-    min-width: 450px;
-    justify-content: space-evenly;
-}
-.nav-menu li{
-   list-style-type: none;
- }
-.nav-menu li a{
-   color: aliceblue;
-}
-.nav-menu li a.active{
-    color: aqua;
- }
-.nav-title{
-    margin-top: 0px;
-    margin-left: 450px;
-}
-.nav-title li{
-    list-style-type: none;
-  }
-  .nav-title li{
-    color: aliceblue;
- }
- .blog-header{
-     font-size:24px;
- }
- .blog-description{
-     margin: 10px 0;
-     font-size: 20px;
-     max-height:80px;
-     min-height:80px;
-     overflow:hidden;
- }
 
- .blog-author{
-     padding: 15px 0;
-     border-top: 1px solid #999;
- }
- .author-name{
-     float:left;
- }
- .blog-date{
-     float:right;
- }
- a{
-    text-decoration: none;
- }
- 
+.logo-container p{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.user{
+   font-weight: 500;
+   font-size: 15px;
+}
